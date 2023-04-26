@@ -2,7 +2,7 @@ import logging
 from string import Formatter
 from typing import Callable, Dict, Optional, Tuple, Union
 
-from eliot import start_action, to_file
+from eliot import start_action
 
 from guardrails.llm_providers import PromptCallable, get_llm_ask
 from guardrails.prompt import Instructions, Prompt
@@ -13,7 +13,6 @@ from guardrails.utils.logs_utils import GuardState
 from guardrails.utils.reask_utils import sub_reasks_with_fixed_values
 
 logger = logging.getLogger(__name__)
-to_file(open("guardrails.log", "w"))
 
 
 class Guard:
